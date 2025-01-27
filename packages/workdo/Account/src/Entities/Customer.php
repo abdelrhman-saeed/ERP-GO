@@ -11,6 +11,7 @@ class Customer extends Model
 {
     use HasFactory;
 
+    protected $table = 'accounting_pkg_customers';
     protected $fillable = [
         'customer_id',
         'user_id',

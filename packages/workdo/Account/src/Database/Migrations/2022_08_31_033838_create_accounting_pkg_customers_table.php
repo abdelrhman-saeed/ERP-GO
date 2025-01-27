@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('customers'))
+        if (!Schema::hasTable('accounting_pkg_customers'))
         {
-            Schema::create('customers', function (Blueprint $table) {
+            Schema::create('accounting_pkg_customers', function (Blueprint $table) {
                 $table->id();
                 $table->integer('customer_id');
                 $table->integer('user_id')->nullable();
@@ -55,6 +55,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('accounting_pkg_customers');
     }
 };

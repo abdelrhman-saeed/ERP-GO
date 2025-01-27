@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('customers', function (Blueprint $table) {
-            if (!Schema::hasColumn('customers', 'credit_note_balance')) {
+        Schema::table('accounting_pkg_customers', function (Blueprint $table) {
+            if (!Schema::hasColumn('accounting_pkg_customers', 'credit_note_balance')) {
                 $table->string('credit_note_balance')->after('balance')->default('0.00');
             }
         });
@@ -29,7 +29,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('customers', function (Blueprint $table) {
+        Schema::table('accounting_pkg_customers', function (Blueprint $table) {
 
         });
     }
