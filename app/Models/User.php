@@ -22,7 +22,8 @@ use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 use Workdo\MusicInstitute\Entities\MusicStudent;
 use Workdo\MusicInstitute\Entities\MusicTeacher;
 
-class User extends Authenticatable implements LaratrustUser,MustVerifyEmail,JWTSubject
+// class User extends Authenticatable implements LaratrustUser,MustVerifyEmail,JWTSubject
+class User extends Authenticatable implements LaratrustUser,JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable, HasRolesAndPermissions,Impersonate, Billable;
 
